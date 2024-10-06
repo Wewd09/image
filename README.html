@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Upload Example</title>
+    <title>Image Upload Button</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            text-align: center;
+            margin: 50px;
         }
         #imageContainer {
             width: 300px;
@@ -17,8 +18,8 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            margin: 20px auto;
             overflow: hidden;
-            margin-top: 10px;
         }
 
         #uploadButton {
@@ -43,27 +44,8 @@
     </style>
 </head>
 <body>
+    <h1>Upload an Image</h1>
     <button id="uploadButton" onclick="document.getElementById('fileInput').click();">Upload Image</button>
-    <input type="file" id="fileInput" accept="image/*" style="display:none;">
+    <in
 
-    <div id="imageContainer">
-        <div id="imageDisplay"></div>
-    </div>
-
-    <script>
-        document.getElementById('fileInput').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                
-                reader.onload = function(e) {
-                    const imageDisplay = document.getElementById('imageDisplay');
-                    imageDisplay.style.backgroundImage = `url(${e.target.result})`;
-                };
-
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
-</body>
-</html>
+    
